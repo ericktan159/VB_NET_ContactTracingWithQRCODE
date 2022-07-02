@@ -667,7 +667,7 @@ Public Class Form1
 
 
 
-        If (openTestcheck) Then
+        If Not (IsNothing(PictureBoxQRScanPausse.Image)) Then '(openTestcheck = True) Then
             Dim deco As QRCodeDecoder = New QRCodeDecoder()
             rchTxtBxDisplayRecords.Text = deco.Decode(New QRCodeBitmapImage(PictureBoxQRScanPausse.Image))
             'setDatafromFromQRToForm(deco.Decode(New QRCodeBitmapImage(PictureBoxQRScanPausse.Image)))
